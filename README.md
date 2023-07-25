@@ -61,3 +61,4 @@ Note the "Join type" "Take attributes from the feature with the largest overlap 
 ## Result without overlaps and original attributes
 
 ![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/1bc2b96a-9be7-4382-a232-1bb0cdd7d4ed)
+

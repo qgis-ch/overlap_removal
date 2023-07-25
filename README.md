@@ -47,7 +47,7 @@ Same as in step 1. You will notice in the attribute table of the intermediate re
 
 ![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/53670772-c962-4fda-9bfe-bd5a8711e804)
 
-### 4. Aggregate algorihtm to eliminate multiple overlaps
+### 4. Aggregate algorithm to eliminate multiple overlaps
 
 ![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/13c4fe6c-88ba-4961-994b-fd6e15f92662)
 

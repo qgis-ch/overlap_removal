@@ -18,15 +18,17 @@ Here is a sample data set illustrating some - for illustration purpose - very la
 6. **Join attributes by location** to get back the original attributes
 
 ## Graphical model
+![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/05fe6533-18a1-4843-b816-3591910ffef1)
+
 
 ## Detailed parameters and steps
 
-## 1. Refactor fields and area calculation
+### 1. Refactor fields and area calculation
 ![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/4dec8b19-802a-4764-8f27-feaf6ac4dfae)
 
 The formula for calulating the original area with 3 decimal places is ```round(area($geometry),3)```.
 
-## 2. Union of the input layer
+### 2. Union of the input layer
 This creates separate polygons for the non-overlapping parts and the overlapping parts, however, when two polygons are overlapping, you will get the overlapping parts duplicated - these need to be eliminated later.
 
 ![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/67472ed4-1f53-4758-bd88-b1e5133dcde1)
@@ -36,17 +38,26 @@ This creates separate polygons for the non-overlapping parts and the overlapping
 
 We don't need an overlay layer if we just check against overlaps *within* the layer.
 
-## 3. Calculating areas with "Refactor fields"
+### 3. Calculating areas with "Refactor fields"
 Same as in step 1. You will notice in the attribute table of the intermediate results that features are duplicated and appear several times with the same area, but different "original_area" attributes:
 
 ![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/53670772-c962-4fda-9bfe-bd5a8711e804)
 
-## 4. Aggregate algorihtm to eliminate multiple overlaps
+### 4. Aggregate algorihtm to eliminate multiple overlaps
 
-![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/bda254b6-5894-4223-8753-05c25ba6f3d8)
+![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/13c4fe6c-88ba-4961-994b-fd6e15f92662)
 
 We group by attribute *area* but the keep the maximum of the *original_area* so we can later dissolve with the neighbour polygon with the largest area.
 
 ![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/e77ebca4-0827-49f3-8ad7-eb37b78f8f8d)
 
+### 5. Join attributes by location
+to get back the original attributes of the input layer.
 
+![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/bede103a-e17d-4ccd-9748-eb1630d4315f)
+
+Note the "Join type" "Take attributes from the feature with the largest overlap only".
+
+## Result without overlaps and original attributes
+
+![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/1bc2b96a-9be7-4382-a232-1bb0cdd7d4ed)

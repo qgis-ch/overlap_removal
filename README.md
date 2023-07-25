@@ -24,7 +24,8 @@ Here is a sample data set illustrating some - for illustration purpose - very la
 ## Detailed parameters and steps
 
 ### 1. Refactor fields and area calculation
-![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/4dec8b19-802a-4764-8f27-feaf6ac4dfae)
+![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/b7f73b30-07fc-4789-943a-8536832717d5)
+
 
 The formula for calulating the original area with 3 decimal places is ```round(area($geometry),3)```.
 

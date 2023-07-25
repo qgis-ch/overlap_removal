@@ -8,6 +8,8 @@ Here is a sample data set illustrating some - for illustration purpose - very la
 
 ![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/333a74cb-7bb0-40bc-ab2c-2e13ddc3d624)
 
+[Download test data (gpkg)](blob:https://github.com/4b32cd5b-15e6-4d61-9d35-6e97ff38cd54)
+
 ## Sequence of Algorithms
 
 1. Calculate the "original_area" of your input polygons using the **Refactor fields** algorithm (with some precision, e.g. 3 decimal places). This area is used as a kind of unique identifier. It is very unlikely that you will have two polygons with the exact same area down to a couple of places behind the decimal point.
@@ -20,6 +22,7 @@ Here is a sample data set illustrating some - for illustration purpose - very la
 ## Graphical model
 ![grafik](https://github.com/qgis-ch/overlap_removal/assets/884476/05fe6533-18a1-4843-b816-3591910ffef1)
 
+[QGIS Graphical model file](blob:https://github.com/aa06fc4e-1809-47e1-b9ec-565a8148b751)
 
 ## Detailed parameters and steps
 
